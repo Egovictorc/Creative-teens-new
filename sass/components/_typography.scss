@@ -1,0 +1,25 @@
+%heading {
+    text-transform: capitalize;
+
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: var(--font-large);
+
+}
+.heading-2 {
+    @extend %heading;
+    font-size: var(--font-medium);
+}
+.heading-3 {
+    @extend %heading;
+    font-size: var(--font-standard);
+}
+.heading-4 {
+    @extend %heading;
+    font-size: var(--font-small);
+}
+.heading-1 {
+
+}

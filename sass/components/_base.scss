@@ -1,0 +1,144 @@
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Regular'), local('Nunito-Regular'),
+       url('../fonts/nunito-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Regular'), local('Nunito-Regular'),
+       url('../fonts/nunito-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+// COLOR VARIABLES
+$color-primary: #ddd;
+$color-primary-dark: #aaa;
+
+$color-secondary: rgb(205, 154, 226);
+$color-secondary-light: rgb(243, 215, 255);
+$color-secondary-dark: rgb(123, 67, 148);
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$color-white: #fff;
+$color-black: #000;
+
+
+
+:root {
+
+    --color-primary: rgb(247, 247, 247);
+    --color-primary-dark: #B28451;
+
+    --color-secondary: rgb(132, 81, 158);
+    --color-secondary-light: rgb(243, 215, 255);
+    --color-secondary-dark: rgb(123, 67, 148);
+
+    --color-grey-light-1: #f9f7f6;
+    --color-grey-light-2: #aaa;
+
+    --color-grey: #777;
+    --color-grey-dark-1: #54483A;
+    --color-grey-dark-2: #6D5D4B;
+
+    --color-overlay-dark: rgba(0,0,0, .7);
+    --color-overlay-light: rgba(255, 255, 255, .7);
+
+    --color-white: #fff;
+    --color-black: #000;
+        // FONT VARIABLES
+    --font-primary: 'Nunito', sans-serif;
+    --font-display: 'Josefin Sans', sans-serif;
+
+    --font-xlarge: 3.6rem;
+    --font-large: 3rem;
+    --font-medium: 2.4rem;
+    --font-standard: 1.6rem;
+    --font-small: 1.2rem;
+
+    --gap-row: 5vh;
+
+    /////PADDING
+    --padding-link: 1.6rem 3rem;
+
+    //////SHADOW
+    --shadow-text: 0 1px 5px #333;
+    --shadow-box: 0 .2rem .5rem #555;
+}
+
+::selection {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+// RESPONSIVE BREAKPOINTS
+$bp-xlarge: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+$bp-xsmall: 25em;     // 400px
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (min-width: $bp-large) {
+        font-size: 75%;
+    }
+}
+
+body {
+    font: {
+        family: var(--font-primary);
+        //var(--font-primary);
+        weight: 400;
+    }
+    color: var(--color-grey);
+    background-color: var(--color-primary);
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+
+    /*
+    grid-template-columns: [sidebar-start]8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    */
+
+    grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(4, [col-start] minmax(6rem, 20rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+    grid-template-rows: 100vh repeat(3, min-content);
+
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 5vw;
+
+    @media only screen and (min-width: $bp-large) {
+        grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(4, [col-start] minmax(6rem, 20rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+    }
+}
+
+.main {
+    grid-column: center-start / center-end;
+
+}

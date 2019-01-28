@@ -1,0 +1,9 @@
+.footer {
+    grid-column: 1 / -1;
+    grid-row: 5 / -1;
+    font-size: var(--font-small);
+    text-align: center;
+    padding: 2vh;
+    background-color: var(--color-overlay-dark);
+    z-index: 1;
+}

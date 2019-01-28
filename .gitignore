@@ -1,0 +1,9 @@
+*.js
+
+css/*
+!css/style.css
+
+node_modules/
+*package-lock.json
+
+fonts/ignore/

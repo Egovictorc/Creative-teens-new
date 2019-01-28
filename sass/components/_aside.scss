@@ -1,0 +1,47 @@
+.aside {
+    grid-column: full-start / full-end;
+    grid-row: 2 / 3;
+    //padding: 3vw;
+
+    @media only screen and (min-width: $bp-large) {
+        grid-column: full-start / center-start;
+        grid-row: 2 / grid-end;
+    }
+
+    &__nav {
+
+
+    }
+
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, min-content);
+        grid-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (min-width: $bp-large) {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, min-content);
+        }
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__icon-box {
+        width: 5vw;
+        height: 5vw;
+
+        @media only screen and (min-width: $bp-medium) {
+            width: 3.2vw;
+            height: 3.2vw;
+        }
+    }
+}
