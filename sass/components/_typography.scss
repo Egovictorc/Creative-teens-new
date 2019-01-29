@@ -1,5 +1,6 @@
 %heading {
     text-transform: capitalize;
+    line-height: 1.2;
 
 }
 
@@ -19,7 +20,4 @@
 .heading-4 {
     @extend %heading;
     font-size: var(--font-small);
-}
-.heading-1 {
-
 }

@@ -36,12 +36,20 @@
     }
 
     &__icon-box {
-        width: 5vw;
-        height: 5vw;
+        width: 8vw;
+        height: 8vw;
 
         @media only screen and (min-width: $bp-medium) {
-            width: 3.2vw;
-            height: 3.2vw;
+            width: 6vw;
+            height: 6vw;
+        }
+        @media only screen and (min-width: $bp-large) {
+            width: 4.5vw;
+            height: 4.5vw;
+        }
+        @media only screen and (min-width: $bp-xlarge) {
+            width: 3.5vw;
+            height: 3.5vw;
         }
     }
 }

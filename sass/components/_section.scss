@@ -74,17 +74,6 @@
         box-shadow: var(--shadow-box);
         cursor: pointer;
         color: var(--color-white);
-        background-image: linear-gradient(to right, $color-secondary, $color-secondary-dark);
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-
-        &:hover,
-        &:active {
-            background-image: linear-gradient(to left, $color-secondary, $color-secondary-dark);
-
-        }
-        &:active {
-            transform:  perspective(100rem) translate3D(0, -.2rem, 1rem);
-        }
 
     }
     &__link {
@@ -95,6 +84,17 @@
             padding: var(--padding-link);
             font-size: var(--font-standard);
             color: currentcolor;
+
+            background-image: linear-gradient(to right, $color-secondary, $color-secondary-dark);
+            transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+
+        &:hover,
+        &:active {
+            background-image: linear-gradient(to left, $color-secondary, $color-secondary-dark);
+        }
+        &:active {
+            transform:  perspective(100rem) translate3D(0, -.2rem, 1rem);
         }
     }
 
@@ -147,7 +147,6 @@
         grid-row-gap: 5vh;
         grid-column-gap: 5vh;
         justify-items: center;
-
     }
 
     &__technology {
