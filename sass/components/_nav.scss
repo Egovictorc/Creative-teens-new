@@ -62,7 +62,7 @@
     }
 
     &__icon {
-
+        position: relative;
         /*
         position: relative;
         top: 50%;
@@ -78,7 +78,7 @@
             height: 2px;
             background-color: var(--color-black);
             z-index: 100;
-            position: absolute;
+            
 
         }
 
